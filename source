@@ -1,0 +1,442 @@
+--[[
+	Please don't stalk!
+]]
+
+local MV = game.CoreGui:FindFirstChild("MobileVers")
+if MV then
+	MV:Destroy()
+end
+
+local MobileVers = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Generators = Instance.new("TextButton")
+local GensQuickOpen = Instance.new("TextButton")
+local Pages = Instance.new("TextButton")
+local Slender = Instance.new("TextButton")
+local fenv = Instance.new("Frame")
+local shadowHolder = Instance.new("Frame")
+local umbraShadow = Instance.new("ImageLabel")
+local penumbraShadow = Instance.new("ImageLabel")
+local ambientShadow = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local ProxyInfo = Instance.new("TextLabel")
+local Minus = Instance.new("TextButton")
+local R = Instance.new("TextButton")
+
+MobileVers.Name = "MobileVers"
+MobileVers.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = MobileVers
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Frame.Position = UDim2.new(0.114532016, 0, 0.5, 0)
+Frame.Selectable = true
+Frame.Size = UDim2.new(0.154320985, 0, 0.300000012, 0)
+
+UICorner.Parent = Frame
+
+Generators.Name = "Generators"
+Generators.Parent = Frame
+Generators.Active = false
+Generators.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Generators.BorderSizePixel = 0
+Generators.Position = UDim2.new(0, 0, 0.527777135, 0)
+Generators.Selectable = false
+Generators.Size = UDim2.new(1, 0, 0.157232702, 0)
+Generators.Font = Enum.Font.Ubuntu
+Generators.Text = "Show Geners (Z)"
+Generators.TextColor3 = Color3.fromRGB(0, 255, 0)
+Generators.TextScaled = true
+Generators.TextSize = 14.000
+Generators.TextWrapped = true
+
+GensQuickOpen.Name = "GensQuickOpen"
+GensQuickOpen.Parent = Frame
+GensQuickOpen.Active = false
+GensQuickOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GensQuickOpen.BorderSizePixel = 0
+GensQuickOpen.Position = UDim2.new(0, 0, 0.74790293, 0)
+GensQuickOpen.Selectable = false
+GensQuickOpen.Size = UDim2.new(1, 0, 0.157232702, 0)
+GensQuickOpen.Font = Enum.Font.Ubuntu
+GensQuickOpen.Text = "Tele Geners (Q)"
+GensQuickOpen.TextColor3 = Color3.fromRGB(255, 165, 0)
+GensQuickOpen.TextScaled = true
+GensQuickOpen.TextSize = 14.000
+GensQuickOpen.TextWrapped = true
+
+Pages.Name = "Pages"
+Pages.Parent = Frame
+Pages.Active = false
+Pages.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Pages.BorderSizePixel = 0
+Pages.Position = UDim2.new(0, 0, 0.0940322429, 0)
+Pages.Selectable = false
+Pages.Size = UDim2.new(1, 0, 0.157232702, 0)
+Pages.Font = Enum.Font.Ubuntu
+Pages.Text = "Show Pages (Z)"
+Pages.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pages.TextScaled = true
+Pages.TextSize = 14.000
+Pages.TextWrapped = true
+
+Slender.Name = "Slender"
+Slender.Parent = Frame
+Slender.Active = false
+Slender.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Slender.BorderSizePixel = 0
+Slender.Position = UDim2.new(0, 0, 0.310904652, 0)
+Slender.Selectable = false
+Slender.Size = UDim2.new(1, 0, 0.157232702, 0)
+Slender.Font = Enum.Font.Ubuntu
+Slender.Text = "Show Slendy (Z)"
+Slender.TextColor3 = Color3.fromRGB(255, 0, 0)
+Slender.TextScaled = true
+Slender.TextSize = 14.000
+Slender.TextWrapped = true
+
+fenv.Name = "fenv"
+fenv.Parent = Frame
+fenv.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+fenv.BackgroundTransparency = 0.700
+fenv.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fenv.BorderSizePixel = 0
+fenv.Position = UDim2.new(1.10399997, 0, 0.094032146, 0)
+fenv.Size = UDim2.new(1.26400006, 0, 0.805031419, 0)
+fenv.Visible = false
+
+shadowHolder.Name = "shadowHolder"
+shadowHolder.Parent = fenv
+shadowHolder.BackgroundTransparency = 1.000
+shadowHolder.Size = UDim2.new(1, 0, 1, 0)
+shadowHolder.ZIndex = 0
+
+umbraShadow.Name = "umbraShadow"
+umbraShadow.Parent = shadowHolder
+umbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+umbraShadow.BackgroundTransparency = 1.000
+umbraShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+umbraShadow.Size = UDim2.new(1, 2, 1, 2)
+umbraShadow.ZIndex = 0
+umbraShadow.Image = "rbxassetid://1316045217"
+umbraShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+umbraShadow.ImageTransparency = 0.860
+umbraShadow.ScaleType = Enum.ScaleType.Slice
+umbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+penumbraShadow.Name = "penumbraShadow"
+penumbraShadow.Parent = shadowHolder
+penumbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+penumbraShadow.BackgroundTransparency = 1.000
+penumbraShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+penumbraShadow.Size = UDim2.new(1, 2, 1, 2)
+penumbraShadow.ZIndex = 0
+penumbraShadow.Image = "rbxassetid://1316045217"
+penumbraShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+penumbraShadow.ImageTransparency = 0.880
+penumbraShadow.ScaleType = Enum.ScaleType.Slice
+penumbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+ambientShadow.Name = "ambientShadow"
+ambientShadow.Parent = shadowHolder
+ambientShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+ambientShadow.BackgroundTransparency = 1.000
+ambientShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+ambientShadow.Size = UDim2.new(1, 2, 1, 2)
+ambientShadow.ZIndex = 0
+ambientShadow.Image = "rbxassetid://1316045217"
+ambientShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+ambientShadow.ImageTransparency = 0.880
+ambientShadow.ScaleType = Enum.ScaleType.Slice
+ambientShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+TextLabel.Parent = fenv
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.03164557, 0, 0.0337839127, 0)
+TextLabel.Size = UDim2.new(0.936708868, 0, 0.92187506, 0)
+TextLabel.Font = Enum.Font.Ubuntu
+TextLabel.Text = "White Text - Show All Pages; Red Text - Show The Slender; Green Text - Show All Generators; Orange Text - [GoodForPowerSupply] Teleport To All Off Generators; R Letter - Auto Rejoin When Disconnect Or Kick; Minus Symbol - Toggle UI; Made by @creepstu..."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+
+ProxyInfo.Name = "ProxyInfo"
+ProxyInfo.Parent = MobileVers
+ProxyInfo.Active = true
+ProxyInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ProxyInfo.BackgroundTransparency = 1.000
+ProxyInfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ProxyInfo.BorderSizePixel = 0
+ProxyInfo.Position = UDim2.new(-0.0302469134, 0, 0.480188668, 0)
+ProxyInfo.Rotation = 90.000
+ProxyInfo.Size = UDim2.new(0.104938269, 0, 0.0377358496, 0)
+ProxyInfo.Font = Enum.Font.Ubuntu
+ProxyInfo.Text = "Device Vers"
+ProxyInfo.TextColor3 = Color3.fromRGB(0, 0, 0)
+ProxyInfo.TextScaled = true
+ProxyInfo.TextSize = 14.000
+ProxyInfo.TextWrapped = true
+
+Minus.Name = "Minus"
+Minus.Parent = MobileVers
+Minus.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Minus.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Minus.BorderSizePixel = 0
+Minus.Position = UDim2.new(0.00987654366, 0, 0.376811296, 0)
+Minus.Size = UDim2.new(0.0246913582, 0, 0.0377358496, 0)
+Minus.Font = Enum.Font.Ubuntu
+Minus.Text = "-"
+Minus.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minus.TextScaled = true
+Minus.TextSize = 14.000
+Minus.TextWrapped = true
+
+R.Name = "R"
+R.Parent = MobileVers
+R.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+R.BorderColor3 = Color3.fromRGB(0, 0, 0)
+R.BorderSizePixel = 0
+R.Position = UDim2.new(0.00987654366, 0, 0.582471669, 0)
+R.Size = UDim2.new(0.0246913582, 0, 0.0377358496, 0)
+R.Font = Enum.Font.Ubuntu
+R.Text = "R"
+R.TextColor3 = Color3.fromRGB(255, 255, 255)
+R.TextScaled = true
+R.TextSize = 14.000
+R.TextWrapped = true
+
+MobileVers.Parent = game.CoreGui
+
+local function IFWC_fake_script() -- Generators.LocalScript 
+	local script = Instance.new('LocalScript', Generators)
+
+	local function createGuiGens(parent)
+		local BGui = Instance.new("BillboardGui")
+		BGui.Parent = parent
+		BGui.AlwaysOnTop = true
+		BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		BGui.StudsOffset = Vector3.new(0, 3, 0)
+		BGui.Size = UDim2.new(5, 0, 1.5, 0)
+	
+		local text = Instance.new("TextLabel")
+		text.Parent = BGui
+		text.TextScaled = true
+		text.BackgroundTransparency = 1
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.TextColor3 = Color3.fromRGB(0, 0, 255)
+		text.Text = "Generator"
+	
+		if parent:FindFirstChild("On") then
+	
+			if parent.On.Value == true then
+				text.Text = "Generator (Activated)"
+				text.TextColor3 = Color3.fromRGB(0, 255, 0)
+			end
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function() 
+		local model = game.Workspace.MAP.GENS
+		for _, v in pairs(model:GetChildren()) do
+			createGuiGens(v)
+	
+			if v:FindFirstChild("On") then
+				local isOn = v.On
+	
+				isOn.Changed:Connect(function()
+					v.BillboardGui.TextLabel.Text = "Generator (Activated)"
+					v.BillboardGui.TextLabel.TextColor3 = Color3.fromRGB(255, 150, 0)
+				end)
+			end
+		end
+	end)
+end
+coroutine.wrap(IFWC_fake_script)()
+local function ZCCRBRK_fake_script() -- GensQuickOpen.LocalScript 
+	local script = Instance.new('LocalScript', GensQuickOpen)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local CH = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+		for _, y in pairs(workspace.MAP.GENS:GetDescendants()) do
+			if y:IsA('BoolValue') and y.Name == "On" and y.Value == false then
+				CH.CFrame = y.Parent.Prompt1.CFrame
+			end
+		end
+	end)
+end
+coroutine.wrap(ZCCRBRK_fake_script)()
+local function DCHLXOZ_fake_script() -- Pages.LocalScript 
+	local script = Instance.new('LocalScript', Pages)
+
+	local function createGuiPages(parent)
+		if parent.Transparency == 0 then
+			local BGui = Instance.new("BillboardGui")
+			BGui.Parent = parent
+			BGui.AlwaysOnTop = true
+			BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+			BGui.StudsOffset = Vector3.new(0, 3, 0)
+			BGui.Size = UDim2.new(5, 0, 1.5, 0)
+	
+			local text = Instance.new("TextLabel")
+			text.Parent = BGui
+			text.Text = "Page"
+			text.TextScaled = true
+			text.BackgroundTransparency = 1
+			text.Size = UDim2.new(1, 0, 1, 0)
+			text.TextColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.Workspace.MAP.Pages ~= nil and game.Workspace.MAP.HPageSpawns ~= nil then
+			local model1 = game.Workspace.MAP.Pages
+	
+			for _, v in pairs(model1:GetChildren()) do
+				createGuiPages(v)
+	
+				v.Changed:Connect(function()
+					if v.Transparency == 1 then
+	
+						local BGui = v.BillboardGui
+						BGui:Destroy()
+					end
+				end)
+			end
+	
+			local model2 = game.Workspace.MAP.HPageSpawns
+	
+			for _, v in pairs(model2:GetChildren()) do
+				createGuiPages(v)
+	
+				v.Changed:Connect(function()
+					if v.Transparency == 1 then
+	
+						local BGui = v.BillboardGui
+						BGui:Destroy()
+					end
+				end)
+			end
+		end
+	end)
+end
+coroutine.wrap(DCHLXOZ_fake_script)()
+local function DVIV_fake_script() -- Slender.LocalScript 
+	local script = Instance.new('LocalScript', Slender)
+
+	local function createGuiSlender(parent)
+		local BGui = Instance.new("BillboardGui")
+		BGui.Parent = parent
+		BGui.AlwaysOnTop = true
+		BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		BGui.StudsOffset = Vector3.new(0, 3, 0)
+		BGui.Size = UDim2.new(5, 0, 1.5, 0)
+	
+		local text = Instance.new("TextLabel")
+		text.Parent = BGui
+		text.Text = "Slender"
+		text.TextScaled = true
+		text.BackgroundTransparency = 1
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.TextColor3 = Color3.fromRGB(255, 0, 0)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for _, v in pairs(game.Workspace:GetChildren()) do
+			if v:FindFirstChild("SlenderProp") then
+				createGuiSlender(v)
+			end
+		end
+	end)
+end
+coroutine.wrap(DVIV_fake_script)()
+local function LGVHDWS_fake_script() -- MobileVers.SoundSystem 
+	local script = Instance.new('LocalScript', MobileVers)
+
+	local function playSound(sound)
+		script.Parent[sound]:Play()
+	end
+	
+	for _, v in pairs(script.Parent:GetDescendants()) do
+		if v:IsA('TextButton') or v:IsA('ImageButton') then
+			v.MouseEnter:Connect(function()
+				playSound("hovers")
+			end)
+	
+			v.MouseLeave:Connect(function()
+				playSound("leaves")
+			end)
+	
+			v.MouseButton1Click:Connect(function()
+				playSound("clicking")
+			end)
+		end
+	end
+end
+coroutine.wrap(LGVHDWS_fake_script)()
+local function TZHKARW_fake_script() -- ProxyInfo.LocalScript 
+	local script = Instance.new('LocalScript', ProxyInfo)
+
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.Parent.Frame.fenv.Visible = true
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent.Parent.Frame.fenv.Visible = false
+	end)
+end
+coroutine.wrap(TZHKARW_fake_script)()
+local function XAXUY_fake_script() -- Minus.LocalScript 
+	local script = Instance.new('LocalScript', Minus)
+
+	local frame = script.Parent.Parent.Frame
+	local enable = true
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if enable == true then
+			enable = false
+			script.Parent.Text = "+"
+			frame.Visible = false
+		else
+			enable = true
+			script.Parent.Text = "-"
+			frame.Visible = true
+		end
+	end)
+end
+coroutine.wrap(XAXUY_fake_script)()
+local function XYWYVNU_fake_script() -- R.LocalScript 
+	local script = Instance.new('LocalScript', R)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players")
+		local PlaceId = game.PlaceId
+		local JobId = game.JobId
+		local TeleportService = game:GetService("TeleportService")
+		local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promptOverlay")
+		Dir.DescendantAdded:Connect(function(Err)
+			if Err.Name == "ErrorTitle" then
+				Err:GetPropertyChangedSignal("Text"):Connect(function()
+					if Err.Text:sub(0, 12) == "Disconnected" then
+						if #Players:GetPlayers() <= 1 then
+							Players.LocalPlayer:Kick("\nRejoining...")
+							wait()
+							TeleportService:Teleport(PlaceId, Players.LocalPlayer)
+						else
+							TeleportService:TeleportToPlaceInstance(PlaceId, JobId, Players.LocalPlayer)
+						end
+					end
+				end)
+			end
+		end)
+		print('Auto Rejoin','Auto rejoin enabled')
+	end)
+end
+coroutine.wrap(XYWYVNU_fake_script)()
