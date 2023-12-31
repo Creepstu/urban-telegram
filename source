@@ -23,6 +23,7 @@ local TextLabel = Instance.new("TextLabel")
 local ProxyInfo = Instance.new("TextLabel")
 local Minus = Instance.new("TextButton")
 local R = Instance.new("TextButton")
+local cam = workspace.CurrentCamera
 
 MobileVers.Name = "MobileVers"
 MobileVers.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -45,7 +46,7 @@ Generators.Position = UDim2.new(0, 0, 0.527777135, 0)
 Generators.Selectable = false
 Generators.Size = UDim2.new(1, 0, 0.157232702, 0)
 Generators.Font = Enum.Font.Ubuntu
-Generators.Text = "Show Geners (Z)"
+Generators.Text = "Show Geners"
 Generators.TextColor3 = Color3.fromRGB(0, 255, 0)
 Generators.TextScaled = true
 Generators.TextSize = 14.000
@@ -60,7 +61,7 @@ GensQuickOpen.Position = UDim2.new(0, 0, 0.74790293, 0)
 GensQuickOpen.Selectable = false
 GensQuickOpen.Size = UDim2.new(1, 0, 0.157232702, 0)
 GensQuickOpen.Font = Enum.Font.Ubuntu
-GensQuickOpen.Text = "Tele Geners (Q)"
+GensQuickOpen.Text = "Tele Geners"
 GensQuickOpen.TextColor3 = Color3.fromRGB(255, 165, 0)
 GensQuickOpen.TextScaled = true
 GensQuickOpen.TextSize = 14.000
@@ -75,7 +76,7 @@ Pages.Position = UDim2.new(0, 0, 0.0940322429, 0)
 Pages.Selectable = false
 Pages.Size = UDim2.new(1, 0, 0.157232702, 0)
 Pages.Font = Enum.Font.Ubuntu
-Pages.Text = "Show Pages (Z)"
+Pages.Text = "Show Pages"
 Pages.TextColor3 = Color3.fromRGB(255, 255, 255)
 Pages.TextScaled = true
 Pages.TextSize = 14.000
@@ -90,7 +91,7 @@ Slender.Position = UDim2.new(0, 0, 0.310904652, 0)
 Slender.Selectable = false
 Slender.Size = UDim2.new(1, 0, 0.157232702, 0)
 Slender.Font = Enum.Font.Ubuntu
-Slender.Text = "Show Slendy (Z)"
+Slender.Text = "Show Slendy"
 Slender.TextColor3 = Color3.fromRGB(255, 0, 0)
 Slender.TextScaled = true
 Slender.TextSize = 14.000
@@ -159,7 +160,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.03164557, 0, 0.0337839127, 0)
 TextLabel.Size = UDim2.new(0.936708868, 0, 0.92187506, 0)
 TextLabel.Font = Enum.Font.Ubuntu
-TextLabel.Text = "White Text - Show All Pages; Red Text - Show The Slender; Green Text - Show All Generators; Orange Text - [GoodForPowerSupply] Teleport To All Off Generators; R Letter - Auto Rejoin When Disconnect Or Kick; Minus Symbol - Toggle UI; Made by @creepstu..."
+TextLabel.Text = "White Text - Show All Pages; Red Text - Show The Slender; Green Text - Show All Generators; Orange Text - Teleport To All Off Generators; R Letter - Auto Rejoin When Disconnect Or Kick; Minus Symbol - Toggle UI; Made by @creepstu..."
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -179,7 +180,7 @@ ProxyInfo.Position = UDim2.new(-0.0302469134, 0, 0.480188668, 0)
 ProxyInfo.Rotation = 90.000
 ProxyInfo.Size = UDim2.new(0.104938269, 0, 0.0377358496, 0)
 ProxyInfo.Font = Enum.Font.Ubuntu
-ProxyInfo.Text = "Mobile Vers"
+ProxyInfo.Text = "INFO"
 ProxyInfo.TextColor3 = Color3.fromRGB(0, 0, 0)
 ProxyInfo.TextScaled = true
 ProxyInfo.TextSize = 14.000
@@ -232,10 +233,9 @@ local function IFWC_fake_script() -- Generators.LocalScript
 		text.BackgroundTransparency = 1
 		text.Size = UDim2.new(1, 0, 1, 0)
 		text.TextColor3 = Color3.fromRGB(0, 0, 255)
-		text.Text = "Generator"
+		text.Text = "Generator (" .. math.floor((cam.CFrame - parent.PrimaryPart.CFrame).magnitude) .. "m away)"
 	
 		if parent:FindFirstChild("On") then
-	
 			if parent.On.Value == true then
 				text.Text = "Generator (Activated)"
 				text.TextColor3 = Color3.fromRGB(0, 255, 0)
@@ -287,7 +287,7 @@ local function DCHLXOZ_fake_script() -- Pages.LocalScript
 	
 			local text = Instance.new("TextLabel")
 			text.Parent = BGui
-			text.Text = "Page"
+			text.Text = "Page (" .. math.floor((cam.CFrame - parent.CFrame).magnitude) .. "m away)"
 			text.TextScaled = true
 			text.BackgroundTransparency = 1
 			text.Size = UDim2.new(1, 0, 1, 0)
